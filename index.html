@@ -26,13 +26,12 @@
     <main>
         <section id="home-page">
             <header>
-                <h1 class="text-2xl font-bold text-left my-4 px-3">Hi <span id="welcome-user">[user]</span>, Welcome to My Website!</h1>
+                <h1 class="text-2xl font-bold text-left my-4 px-3">Hi <span id="welcome-user">[user]</span>, Welcome to The Website!</h1>
             </header>
 
             <div>
-                <p class="text-left px-3">This is the home page content. Here you can find informations about our services.</p>
-
-                <div class="banner-img my-8"></div>
+                <p class="text-left px-3">Feel free to explore the website and learn more about the informations we provide.</p>
+                <div class="bg-[url('images/banner.png')] my-8 h-180 w-full bg-center bg-cover"></div>
             </div>
         </section>
 
@@ -40,11 +39,64 @@
 
         <section id="our-profile" class="mt-8">
             <header>
-                <h2 class="text-xl font-semibold text-left my-4 px-3">Our Profile</h2>
+                <h1 class="text-xl font-bold text-left my-4 px-3">My Profile</h1>
             </header>
 
             <div class="profile-content">
-                <p class="text-left my-8 px-3">We are a team of dedicated professionals committed to providing the best services.</p>
+                <p class="text-left my-6 px-3">I am Jasmine, an enthusiastic undergraduate student in Informatics Engineering at the University of Mataram, with a strong track record of contributing to various event committees, showcasing my organizational and teamwork skills.</p>
+
+                <h3 class="text-x1 font-bold text-left my-4 px-3">Contact</h3>
+                <div class="flex px-3">
+                    <span class="w-32 text-left">Name</span>
+                    <span class="mr-1">:</span>
+                    <span>Jasmine Aulia Santoso</span>
+                </div>
+
+                <div class="flex px-3">
+                    <span class="w-32 text-left">Phone</span>
+                    <span class="mr-1">:</span>
+                    <span>085180687523</span>
+                </div>
+
+                <div class="flex px-3">
+                    <span class="w-32 text-left">Email</span>
+                    <span class="mr-1">:</span>
+                    <span>jasminesantoso06@gmail.com</span>
+                </div>
+
+                <div class="flex px-3">
+                    <span class="w-32 text-left">Instagram</span>
+                    <span class="mr-1">:</span>
+                    <span>@_jasmineaulia</span>
+                </div>
+
+                <h3 class="text-x1 font-bold text-left my-4 px-3">Education</h3>
+
+                <div class="flex-col my-4 px-3">   
+                    <span class="font-semibold">University of Mataram | 2024 - Present</span>
+                    <p>Bachelor of Informatics Engineering</p>
+                </div>
+
+                <div class="flex-col my-4 px-3">   
+                    <span class="font-semibold">MAN 2 Mataram | 2021 - 2024</span>
+                    <p>Mathematic and Science Major</p>
+                </div>
+
+                <h3 class="text-x1 font-bold text-left my-4 px-3">Organization</h3>
+
+                <ul type="disc" class="list-disc ml-4 px-3">
+                    <li>Himpunan Mahasiswa Informatika Universitas Mataram (HMIF) | 2024 - Present</li>
+                    <li>Teater MATA MAN 2 Mataram | 2022-2023</li>
+                    <li>ORSIMA MAN 2 Mataram | 2022-2023</li>
+                    <li>MAN 2 Mataram Olimpiade Team Bidang Kebumian | 2022-2024</li>
+                </ul>
+
+                <h3 class="text-x1 font-bold text-left my-4 px-3">Certificates</h3>
+
+                <ul type="disc" class="list-disc ml-4 my-6 px-3">
+                    <li>PASKIBRAKA Provinsi Nusa Tenggara Barat | 2022</li>
+                    <li>Olimpiade Sains Nasional Tingkat Provinsi Bidang Kebumian | 2023</li>
+                </ul>
             </div>
         </section>
 
@@ -52,10 +104,10 @@
 
         <section id="message-us">
             <header>
-                <h2 class="text-xl font-semibold text-left my-4 px-3">Message Us</h2>
+                <h1 class="text-xl font-bold text-left my-4 px-3">Message Me</h1>
             </header>
 
-            <form>
+            <form class="w-1/2">
 
                 <div class="flex mb-3 px-3">
                     <label for="name-input" class="block text-left m-2">Name : </label>
@@ -85,18 +137,21 @@
 
                 <div class="flex mb-3 px-3">
                     <label for="message-us" class="block text-left m-2">Message : </label>
-                    <textarea type="text" id="message-us" name="message-us" class="border rounded px-4 pt-2 text-left align-top" rows="4" required></textarea>
+                    <textarea id="message-input" name="message-us" class="border rounded px-4 pt-2 text-left align-top" rows="4" required></textarea>
 
                 </div>
 
                 <div class="flex mb-6 px-30">
                     <button onclick="validateForm();" type="button" class="bg-blue-700 text-white py-2 px-10 rounded hover:bg-gray-400">Submit</button>
                 </div>
+
+                <div id="message-output" class="flex w-1/2 border border-black text-left mt-4 py-3 px-4"> </div>
+
             </form>
 
-           <div id="message-output" class="text-right mt-4 py-3 px-3">Result: </div>
-
         </section>
+
+        
     </main>
 
     <hr/>

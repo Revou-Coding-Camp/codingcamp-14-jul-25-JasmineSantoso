@@ -15,7 +15,7 @@ function validateForm() {
  const nameInput = document.getElementById('name-input');
  const birthDateInput = document.getElementById('birth-date');
  const genderInput = document.getElementsByName('gender');
- const messageInput = document.getElementById('message-us');
+ const messageInput = document.getElementById('message-input');
 
  // Validate name
  if (nameInput.value === '') {
@@ -37,10 +37,10 @@ function validateForm() {
  today.setHours(0,0,0,0); // Reset time to midnight for comparison
 
  // Validate gender
- let genderSelected = false;
+ let genderSelected = '';
  for (let gender of genderInput) {
     if (gender.checked) {
-        genderSelected = true;
+        genderSelected = gender.value;
         break;
     }
  }
@@ -56,7 +56,19 @@ if (messageInput.value.trim() === '') {
     return;
 } 
 
-document.getElementById('message-output').innerHTML = `Thank you, ${nameInput.value} for your message!`;
+// Get current time
+const currentTime = new Date().toLocaleString();
+
+// Display submission details
+document.getElementById('message-output').innerHTML = `
+<div class="text-left">
+   <p><strong>Current Time:</strong> ${currentTime}</p>
+   <h3 class="text-lg font-semibold mb-2">Submission Details:</h3>
+   <p><strong>Name:</strong> ${nameInput.value}</p>
+   <p><strong>Birth Date:</strong> ${birthDateInput.value}</p>
+   <p><strong>Gender:</strong> ${genderSelected}</p>
+   <p><strong>Message:</strong> ${messageInput.value}</p>
+</div>`;
 
 // Clear form after submission
 nameInput.value = '';
