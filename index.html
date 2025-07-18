@@ -12,12 +12,12 @@
     <header class="flex justify-between items-center p-[8px] bg-green-50">
 
         <!-- Logo -->
-        <div class="h-16 w-16 bg-[url('https://assets.brandfetch.io/2idhMR9qxh/id/_logo.png')] rounded-full bg-center bg-cover"></div>
+        <div class="h-16 w-16 px-3 bg-[url('images/logorevoU.png')] rounded-full bg-center bg-cover"></div>
 
         <nav class="flex px-3 space-x-0">
             <a class="border rounded-[4px] py-[4px] px-[8px] text-decoration-none" href="#home-page">Home</a>
-            <a class="border rounded-[4px] py-[4px] px-[8px] text-decoration-none" href="#our-profile">Our Profile</a>
-            <a class="border rounded-[4px] py-[4px] px-[8px] text-decoration-none" href="#message-us">Message Us</a>
+            <a class="border rounded-[4px] py-[4px] px-[8px] text-decoration-none" href="#our-profile">My Profile</a>
+            <a class="border rounded-[4px] py-[4px] px-[8px] text-decoration-none" href="#message-us">Message Me</a>
         </nav>
     </header>
 
@@ -26,7 +26,7 @@
     <main>
         <section id="home-page">
             <header>
-                <h1 class="text-2xl font-bold text-left my-4 px-3">Hi <span id="welcome-user">[user]</span>, Welcome to Our Website!</h1>
+                <h1 class="text-2xl font-bold text-left my-4 px-3">Hi <span id="welcome-user">[user]</span>, Welcome to My Website!</h1>
             </header>
 
             <div>
@@ -85,12 +85,12 @@
 
                 <div class="flex mb-3 px-3">
                     <label for="message-us" class="block text-left m-2">Message : </label>
-                    <textarea type="text" id="message-us" name="message-us" class="border rounded px-3 pt-2 text-left align-top" rows="4" required></textarea>
+                    <textarea type="text" id="message-us" name="message-us" class="border rounded px-4 pt-2 text-left align-top" rows="4" required></textarea>
 
                 </div>
 
                 <div class="flex mb-6 px-30">
-                    <button onclick="validateForm();" type="button" class="bg-blue-700 text-white py-2 px-3 rounded hover:bg-gray-400">Send Message</button>
+                    <button onclick="validateForm();" type="button" class="bg-blue-700 text-white py-2 px-10 rounded hover:bg-gray-400">Submit</button>
                 </div>
             </form>
 
@@ -104,6 +104,7 @@
     <footer>
         <p class="text-right text-gray-700 py-2 px-4">© 2025 Jasmine's Website. All rights reserved.</p>
     </footer>
+    
 
     <script src="js/script.js"></script>
 </body>
